@@ -1,0 +1,266 @@
+Running Gradle task 'assembleRelease'...                        
+Warning: Flutter support for your project's Android Gradle Plugin version (Android Gradle Plugin version 8.2.1) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least Android Gradle Plugin version 8.3.0 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (/home/ubuntu/wimax_pentest_tool/wimax_pentest_tool-main/android/settings.gradle), by a plugin with the id of com.android.application. 
+If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file (/home/ubuntu/wimax_pentest_tool/wimax_pentest_tool-main/android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Checking the license for package Android SDK Platform 35 in /home/ubuntu/Android/sdk/licenses
+License for package Android SDK Platform 35 accepted.
+Preparing "Install Android SDK Platform 35 (revision 2)".
+"Install Android SDK Platform 35 (revision 2)" ready.
+Installing Android SDK Platform 35 in /home/ubuntu/Android/sdk/platforms/android-35
+"Install Android SDK Platform 35 (revision 2)" complete.
+"Install Android SDK Platform 35 (revision 2)" finished.
+Checking the license for package Android SDK Platform 33 in /home/ubuntu/Android/sdk/licenses
+License for package Android SDK Platform 33 accepted.
+Preparing "Install Android SDK Platform 33 (revision 3)".
+"Install Android SDK Platform 33 (revision 3)" ready.
+Installing Android SDK Platform 33 in /home/ubuntu/Android/sdk/platforms/android-33
+"Install Android SDK Platform 33 (revision 3)" complete.
+"Install Android SDK Platform 33 (revision 3)" finished.
+Error: Couldn't resolve the package 'file_picker' in 'package:file_picker/file_picker.dart'.
+Error: Couldn't resolve the package 'wifi_iot' in 'package:wifi_iot/wifi_iot.dart'.
+lib/presentation/screens/live_bruteforce_screen.dart:3:8: Error: Not found: 'package:file_picker/file_picker.dart'
+import 'package:file_picker/file_picker.dart';
+       ^
+lib/presentation/screens/password_crack_screen.dart:2:8: Error: Not found: 'package:file_picker/file_picker.dart'
+import 'package:file_picker/file_picker.dart';
+       ^
+lib/presentation/screens/live_bruteforce_screen.dart:5:8: Error: Not found: 'package:wifi_iot/wifi_iot.dart'
+import 'package:wifi_iot/wifi_iot.dart';
+       ^
+lib/presentation/screens/wps_attack_screen.dart:2:8: Error: Not found: 'package:wifi_iot/wifi_iot.dart'
+import 'package:wifi_iot/wifi_iot.dart';
+       ^
+lib/presentation/screens/handshake_capture_screen.dart:2:8: Error: Not found: 'package:wifi_iot/wifi_iot.dart'
+import 'package:wifi_iot/wifi_iot.dart';
+       ^
+lib/presentation/screens/network_risk_analyzer_screen.dart:2:8: Error: Not found: 'package:wifi_iot/wifi_iot.dart'
+import 'package:wifi_iot/wifi_iot.dart';
+       ^
+lib/presentation/screens/wps_attack_screen.dart:3:8: Error: Error when reading 'lib/presentation/services/terminal_service.dart': No such file or directory
+import '../services/terminal_service.dart';
+       ^
+lib/presentation/screens/handshake_capture_screen.dart:3:8: Error: Error when reading 'lib/presentation/services/terminal_service.dart': No such file or directory
+import '../services/terminal_service.dart';
+       ^
+lib/presentation/screens/password_crack_screen.dart:3:8: Error: Error when reading 'lib/presentation/services/terminal_service.dart': No such file or directory
+import '../services/terminal_service.dart';
+       ^
+lib/presentation/screens/device_info_screen.dart:2:8: Error: Error when reading 'lib/presentation/services/terminal_service.dart': No such file or directory
+import '../services/terminal_service.dart';
+       ^
+lib/presentation/screens/wps_attack_screen.dart:4:8: Error: Error when reading 'lib/presentation/services/tool_installer.dart': No such file or directory
+import '../services/tool_installer.dart';
+       ^
+lib/presentation/screens/handshake_capture_screen.dart:4:8: Error: Error when reading 'lib/presentation/services/tool_installer.dart': No such file or directory
+import '../services/tool_installer.dart';
+       ^
+lib/presentation/screens/password_crack_screen.dart:4:8: Error: Error when reading 'lib/presentation/services/tool_installer.dart': No such file or directory
+import '../services/tool_installer.dart';
+       ^
+lib/presentation/screens/wps_attack_screen.dart:5:8: Error: Error when reading 'lib/presentation/services/history_service.dart': No such file or directory
+import '../services/history_service.dart';
+       ^
+lib/presentation/screens/handshake_capture_screen.dart:5:8: Error: Error when reading 'lib/presentation/services/history_service.dart': No such file or directory
+import '../services/history_service.dart';
+       ^
+lib/presentation/screens/password_crack_screen.dart:5:8: Error: Error when reading 'lib/presentation/services/history_service.dart': No such file or directory
+import '../services/history_service.dart';
+       ^
+lib/presentation/screens/history_screen.dart:2:8: Error: Error when reading 'lib/presentation/services/history_service.dart': No such file or directory
+import '../services/history_service.dart';
+       ^
+lib/presentation/screens/live_bruteforce_screen.dart:15:8: Error: Type 'WifiNetwork' not found.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/wps_attack_screen.dart:15:8: Error: Type 'WifiNetwork' not found.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/handshake_capture_screen.dart:15:8: Error: Type 'WifiNetwork' not found.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/network_risk_analyzer_screen.dart:12:8: Error: Type 'WifiNetwork' not found.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/network_risk_analyzer_screen.dart:27:23: Error: Type 'WifiNetwork' not found.
+  String _analyzeRisk(WifiNetwork wifi) {
+                      ^^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:15:8: Error: 'WifiNetwork' isn't a type.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:29:24: Error: The getter 'WiFiForIoTPlugin' isn't defined for the class '_LiveBruteForceScreenState'.
+ - '_LiveBruteForceScreenState' is from 'package:wimax_pentest_tool/presentation/screens/live_bruteforce_screen.dart' ('lib/presentation/screens/live_bruteforce_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'WiFiForIoTPlugin'.
+    final list = await WiFiForIoTPlugin.loadWifiList();
+                       ^^^^^^^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:36:26: Error: The getter 'FilePicker' isn't defined for the class '_LiveBruteForceScreenState'.
+ - '_LiveBruteForceScreenState' is from 'package:wimax_pentest_tool/presentation/screens/live_bruteforce_screen.dart' ('lib/presentation/screens/live_bruteforce_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'FilePicker'.
+    final result = await FilePicker.platform.pickFiles();
+                         ^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:60:31: Error: The getter 'WiFiForIoTPlugin' isn't defined for the class '_LiveBruteForceScreenState'.
+ - '_LiveBruteForceScreenState' is from 'package:wimax_pentest_tool/presentation/screens/live_bruteforce_screen.dart' ('lib/presentation/screens/live_bruteforce_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'WiFiForIoTPlugin'.
+      final connected = await WiFiForIoTPlugin.connect(
+                              ^^^^^^^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:64:19: Error: The getter 'NetworkSecurity' isn't defined for the class '_LiveBruteForceScreenState'.
+ - '_LiveBruteForceScreenState' is from 'package:wimax_pentest_tool/presentation/screens/live_bruteforce_screen.dart' ('lib/presentation/screens/live_bruteforce_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'NetworkSecurity'.
+        security: NetworkSecurity.WPA,
+                  ^^^^^^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:69:33: Error: The getter 'WiFiForIoTPlugin' isn't defined for the class '_LiveBruteForceScreenState'.
+ - '_LiveBruteForceScreenState' is from 'package:wimax_pentest_tool/presentation/screens/live_bruteforce_screen.dart' ('lib/presentation/screens/live_bruteforce_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'WiFiForIoTPlugin'.
+      final isConnected = await WiFiForIoTPlugin.isConnected();
+                                ^^^^^^^^^^^^^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:103:37: Error: The getter 'ssid' isn't defined for the class 'Object?'.
+ - 'Object' is from 'dart:core'.
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'ssid'.
+                        value: wifi.ssid,
+                                    ^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:104:42: Error: The getter 'ssid' isn't defined for the class 'Object?'.
+ - 'Object' is from 'dart:core'.
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'ssid'.
+                        child: Text(wifi.ssid ?? "غير معروفة"),
+                                         ^^^^
+lib/presentation/screens/live_bruteforce_screen.dart:106:20: Error: The argument type 'List<dynamic>' can't be assigned to the parameter type 'List<DropdownMenuItem<String>>?'.
+ - 'List' is from 'dart:core'.
+ - 'DropdownMenuItem' is from 'package:flutter/src/material/dropdown.dart' ('../../flutter/packages/flutter/lib/src/material/dropdown.dart').
+                  .toList(),
+                   ^
+lib/presentation/screens/wps_attack_screen.dart:15:8: Error: 'WifiNetwork' isn't a type.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/wps_attack_screen.dart:26:24: Error: The getter 'WiFiForIoTPlugin' isn't defined for the class '_WpsAttackScreenState'.
+ - '_WpsAttackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/wps_attack_screen.dart' ('lib/presentation/screens/wps_attack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'WiFiForIoTPlugin'.
+    final list = await WiFiForIoTPlugin.loadWifiList();
+                       ^^^^^^^^^^^^^^^^
+lib/presentation/screens/wps_attack_screen.dart:38:28: Error: The getter 'ToolInstaller' isn't defined for the class '_WpsAttackScreenState'.
+ - '_WpsAttackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/wps_attack_screen.dart' ('lib/presentation/screens/wps_attack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'ToolInstaller'.
+    final toolsDir = await ToolInstaller.toolsDir;
+                           ^^^^^^^^^^^^^
+lib/presentation/screens/wps_attack_screen.dart:40:26: Error: The getter 'TerminalService' isn't defined for the class '_WpsAttackScreenState'.
+ - '_WpsAttackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/wps_attack_screen.dart' ('lib/presentation/screens/wps_attack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'TerminalService'.
+    final output = await TerminalService.runCommand(cmd);
+                         ^^^^^^^^^^^^^^^
+lib/presentation/screens/wps_attack_screen.dart:47:11: Error: The getter 'HistoryService' isn't defined for the class '_WpsAttackScreenState'.
+ - '_WpsAttackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/wps_attack_screen.dart' ('lib/presentation/screens/wps_attack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'HistoryService'.
+    await HistoryService.saveLog("🔐 WPS Attack on $bssid:\n$output");
+          ^^^^^^^^^^^^^^
+lib/presentation/screens/handshake_capture_screen.dart:15:8: Error: 'WifiNetwork' isn't a type.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/handshake_capture_screen.dart:28:24: Error: The getter 'WiFiForIoTPlugin' isn't defined for the class '_HandshakeCaptureScreenState'.
+ - '_HandshakeCaptureScreenState' is from 'package:wimax_pentest_tool/presentation/screens/handshake_capture_screen.dart' ('lib/presentation/screens/handshake_capture_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'WiFiForIoTPlugin'.
+    final list = await WiFiForIoTPlugin.loadWifiList();
+                       ^^^^^^^^^^^^^^^^
+lib/presentation/screens/handshake_capture_screen.dart:42:28: Error: The getter 'ToolInstaller' isn't defined for the class '_HandshakeCaptureScreenState'.
+ - '_HandshakeCaptureScreenState' is from 'package:wimax_pentest_tool/presentation/screens/handshake_capture_screen.dart' ('lib/presentation/screens/handshake_capture_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'ToolInstaller'.
+    final toolsDir = await ToolInstaller.toolsDir;
+                           ^^^^^^^^^^^^^
+lib/presentation/screens/handshake_capture_screen.dart:46:26: Error: The getter 'TerminalService' isn't defined for the class '_HandshakeCaptureScreenState'.
+ - '_HandshakeCaptureScreenState' is from 'package:wimax_pentest_tool/presentation/screens/handshake_capture_screen.dart' ('lib/presentation/screens/handshake_capture_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'TerminalService'.
+    final output = await TerminalService.runCommand(cmd);
+                         ^^^^^^^^^^^^^^^
+lib/presentation/screens/handshake_capture_screen.dart:53:11: Error: The getter 'HistoryService' isn't defined for the class '_HandshakeCaptureScreenState'.
+ - '_HandshakeCaptureScreenState' is from 'package:wimax_pentest_tool/presentation/screens/handshake_capture_screen.dart' ('lib/presentation/screens/handshake_capture_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'HistoryService'.
+    await HistoryService.saveLog("📶 Handshake Capture ($selectedBSSID):\n$output");
+          ^^^^^^^^^^^^^^
+lib/presentation/screens/network_risk_analyzer_screen.dart:12:8: Error: 'WifiNetwork' isn't a type.
+  List<WifiNetwork> networks = [];
+       ^^^^^^^^^^^
+lib/presentation/screens/network_risk_analyzer_screen.dart:21:24: Error: The getter 'WiFiForIoTPlugin' isn't defined for the class '_NetworkRiskAnalyzerScreenState'.
+ - '_NetworkRiskAnalyzerScreenState' is from 'package:wimax_pentest_tool/presentation/screens/network_risk_analyzer_screen.dart' ('lib/presentation/screens/network_risk_analyzer_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'WiFiForIoTPlugin'.
+    final list = await WiFiForIoTPlugin.loadWifiList();
+                       ^^^^^^^^^^^^^^^^
+lib/presentation/screens/network_risk_analyzer_screen.dart:27:23: Error: 'WifiNetwork' isn't a type.
+  String _analyzeRisk(WifiNetwork wifi) {
+                      ^^^^^^^^^^^
+lib/presentation/screens/password_crack_screen.dart:21:26: Error: The getter 'FilePicker' isn't defined for the class '_PasswordCrackScreenState'.
+ - '_PasswordCrackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/password_crack_screen.dart' ('lib/presentation/screens/password_crack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'FilePicker'.
+    final result = await FilePicker.platform.pickFiles();
+                         ^^^^^^^^^^
+lib/presentation/screens/password_crack_screen.dart:41:28: Error: The getter 'ToolInstaller' isn't defined for the class '_PasswordCrackScreenState'.
+ - '_PasswordCrackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/password_crack_screen.dart' ('lib/presentation/screens/password_crack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'ToolInstaller'.
+    final toolsDir = await ToolInstaller.toolsDir;
+                           ^^^^^^^^^^^^^
+lib/presentation/screens/password_crack_screen.dart:42:26: Error: The getter 'TerminalService' isn't defined for the class '_PasswordCrackScreenState'.
+ - '_PasswordCrackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/password_crack_screen.dart' ('lib/presentation/screens/password_crack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'TerminalService'.
+    final output = await TerminalService.runCommand(
+                         ^^^^^^^^^^^^^^^
+lib/presentation/screens/password_crack_screen.dart:51:11: Error: The getter 'HistoryService' isn't defined for the class '_PasswordCrackScreenState'.
+ - '_PasswordCrackScreenState' is from 'package:wimax_pentest_tool/presentation/screens/password_crack_screen.dart' ('lib/presentation/screens/password_crack_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'HistoryService'.
+    await HistoryService.saveLog("🗝️ Brute-force:\n$output");
+          ^^^^^^^^^^^^^^
+lib/presentation/screens/history_screen.dart:21:23: Error: The getter 'HistoryService' isn't defined for the class '_HistoryScreenState'.
+ - '_HistoryScreenState' is from 'package:wimax_pentest_tool/presentation/screens/history_screen.dart' ('lib/presentation/screens/history_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'HistoryService'.
+    final log = await HistoryService.readHistory();
+                      ^^^^^^^^^^^^^^
+lib/presentation/screens/device_info_screen.dart:21:27: Error: The getter 'TerminalService' isn't defined for the class '_DeviceInfoScreenState'.
+ - '_DeviceInfoScreenState' is from 'package:wimax_pentest_tool/presentation/screens/device_info_screen.dart' ('lib/presentation/screens/device_info_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'TerminalService'.
+    final gateway = await TerminalService.runCommand("ip route | grep default");
+                          ^^^^^^^^^^^^^^^
+lib/presentation/screens/device_info_screen.dart:22:23: Error: The getter 'TerminalService' isn't defined for the class '_DeviceInfoScreenState'.
+ - '_DeviceInfoScreenState' is from 'package:wimax_pentest_tool/presentation/screens/device_info_screen.dart' ('lib/presentation/screens/device_info_screen.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'TerminalService'.
+    final mac = await TerminalService.runCommand("ip link show wlan0");
+                      ^^^^^^^^^^^^^^^
+lib/theme/app_theme.dart:86:16: Error: The argument type 'CardTheme' can't be assigned to the parameter type 'CardThemeData?'.
+ - 'CardTheme' is from 'package:flutter/src/material/card_theme.dart' ('../../flutter/packages/flutter/lib/src/material/card_theme.dart').
+ - 'CardThemeData' is from 'package:flutter/src/material/card_theme.dart' ('../../flutter/packages/flutter/lib/src/material/card_theme.dart').
+    cardTheme: CardTheme(
+               ^
+lib/theme/app_theme.dart:299:18: Error: The argument type 'TabBarTheme' can't be assigned to the parameter type 'TabBarThemeData?'.
+ - 'TabBarTheme' is from 'package:flutter/src/material/tab_bar_theme.dart' ('../../flutter/packages/flutter/lib/src/material/tab_bar_theme.dart').
+ - 'TabBarThemeData' is from 'package:flutter/src/material/tab_bar_theme.dart' ('../../flutter/packages/flutter/lib/src/material/tab_bar_theme.dart').
+    tabBarTheme: TabBarTheme(
+                 ^
+Unhandled exception:
+FileSystemException(uri=org-dartlang-untranslatable-uri:package%3Afile_picker%2Ffile_picker.dart; message=StandardFileSystem only supports file:* and data:* URIs)
+#0      StandardFileSystem.entityForUri (package:front_end/src/api_prototype/standard_file_system.dart:45)
+#1      asFileUri (package:vm/kernel_front_end.dart:984)
+#2      writeDepfile (package:vm/kernel_front_end.dart:1147)
+<asynchronous suspension>
+#3      FrontendCompiler.compile (package:frontend_server/frontend_server.dart:713)
+<asynchronous suspension>
+#4      starter (package:frontend_server/starter.dart:109)
+<asynchronous suspension>
+#5      main (file:///b/s/w/ir/x/w/sdk/pkg/frontend_server/bin/frontend_server_starter.dart:13)
+<asynchronous suspension>
+
+Target kernel_snapshot_program failed: Exception
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildRelease'.
+> Process 'command '/home/ubuntu/flutter/bin/flutter'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 55s
+Running Gradle task 'assembleRelease'...                          115.8s
+Gradle task assembleRelease failed with exit code 1

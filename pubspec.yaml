@@ -1,0 +1,33 @@
+name: wimax_pentest_tool
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: ">=3.0.0 <4.0.0"
+dependencies: 
+  flutter: 
+    sdk: flutter
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.9
+  shared_preferences: ^2.2.2
+  connectivity_plus: ^6.0.0
+  dio: ^5.4.0
+  fluttertoast: ^8.2.4
+  sizer: ^3.0.0
+  fl_chart: ^0.65.0
+  google_fonts: ^6.1.0
+  flutter_dotenv: ^5.2.1
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+    - assets/tools/
+    - assets/wordlists/
+    - .env
+
+
+
