@@ -1,0 +1,93 @@
+workflows:
+  android_production:
+    name: 🚀 Android Production Build
+    environment:
+      vars:
+        FLUTTER_VERSION: "3.22.2"
+        FIREBASE_API_KEY: $FIREBASE_API_KEY
+        FIREBASE_APP_ID: $FIREBASE_APP_ID
+        FIREBASE_SERVICE_ACCOUNT_JSON: $FIREBASE_SERVICE_ACCOUNT_JSON
+    scripts:
+      # الخطوة 1: تثبيت Flutter
+      - name: ⬇️ تثبيت Flutter
+        script: |
+          FLUTTER_HOME="$HOME/programs/flutter"
+          if [ ! -d "$FLUTTER_HOME" ]; then
+            git clone https://github.com/flutter/flutter.git -b $FLUTTER_VERSION $FLUTTER_HOME
+          fi
+          export PATH="$FLUTTER_HOME/bin:$PATH"
+          flutter doctor -v
+
+      # الخطوة 2: إنشاء ملفات Gradle الأساسية
+      - name: 🛠️ إنشاء ملفات Gradle
+        script: |
+          echo "جاري إنشاء ملفات Gradle..."
+          if [ ! -d "android" ]; then
+            flutter create --platforms android .
+          fi
+          
+          # إنشاء ملف gradlew يدوياً إذا لم يتم إنشاؤه
+          if [ ! -f "android/gradlew" ]; then
+            cd android
+            gradle wrapper --gradle-version 7.5 --distribution-type all
+            cd ..
+          fi
+          
+          # منح صلاحيات التنفيذ
+          chmod +x android/gradlew
+          echo "✅ تم إنشاء ملفات Gradle بنجاح"
+
+      # الخطوة 3: إعداد البيئة
+      - name: ⚙️ إعداد البيئة
+        script: |
+          npm install -g firebase-tools@latest --force --unsafe-perm
+
+      # الخطوة 4: تحديث التبعيات
+      - name: 🔄 تحديث التبعيات
+        script: |
+          flutter pub get
+          
+          # التحقق من وجود gradlew قبل التنفيذ
+          if [ ! -f "android/gradlew" ]; then
+            echo "❌ خطأ: ملف gradlew غير موجود!"
+            exit 1
+          fi
+          
+          ./android/gradlew clean -p android
+
+      # الخطوة 5: بناء APK
+      - name: 🏗️ بناء APK
+        script: |
+          set -e
+          flutter build apk --release \
+            --dart-define=FIREBASE_API_KEY=$FIREBASE_API_KEY \
+            --dart-define=FIREBASE_APP_ID=$FIREBASE_APP_ID \
+            --split-debug-info=./debug_info \
+            --verbose
+
+          if [ ! -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
+            echo "❌ فشل البناء - لم يتم إنشاء APK"
+            exit 1
+          fi
+
+      # الخطوة 6: النشر على Firebase
+      - name: 📤 نشر على Firebase
+        script: |
+          echo "$FIREBASE_SERVICE_ACCOUNT_JSON" > /tmp/service-account.json
+          firebase appdistribution:distribute \
+            build/app/outputs/flutter-apk/app-release.apk \
+            --app $FIREBASE_APP_ID \
+            --service-account-json /tmp/service-account.json \
+            --groups "testers" \
+            --debug
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+      - debug_info/**
+    publishing:
+      email:
+        recipients:
+          - "your.email@example.com"
+    cache:
+      cache_paths:
+        - ~/.gradle/caches
+        - ~/.pub-cache
